@@ -1,0 +1,202 @@
+{
+    "editor.rulers": [80],
+    "editor.renderIndentGuides": true,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.d": true,
+        "**/*.o": true,
+
+    },
+
+    "workbench.colorCustomizations": {
+        // All brackgrounds dark grey
+        "statusBar.background": "#111111",
+        "activityBar.background": "#111111",
+        "panel.background": "#111111",
+        "sideBar.background": "#111111",
+        "dropdown.background": "#111111",
+        "editorGroup.background": "#111111",
+        "titleBar.activeBackground": "#111111",
+        "tab.activeBackground": "#000000",
+        "tab.inactiveBackground": "#111111",
+        "tab.hoverBackground": "#222222",
+        "editorGroupHeader.tabsBackground": "#222222",
+        "input.background": "#222222",
+        "statusBarItem.hoverBackground": "#333333",
+        "scrollbarSlider.hoverBackground": "#444444",
+
+        "list.hoverBackground": "#444444",
+        "list.activeSelectionBackground": "#333333",
+        "list.focusBackground": "#444444",
+        "list.inactiveSelectionBackground": "#333333",
+                
+        // terminal settings
+        "terminal.background": "#220022",
+        "terminal.foreground": "#FFFFFF",
+        "terminal.ansiBrightGreen": "#99DD00",
+        "terminal.ansiBrightBlue": "#66a6d1",
+        "terminal.ansiBrightMagenta": "#BB55BB",
+
+        // editor settings
+        "editor.background": "#000000",
+        "editor.foreground": "#ffffff",
+        "editorBracketMatch.background": "#000080",
+        "editorBracketMatch.border": "#000080",
+        "editorRuler.foreground": "#222222",
+        "editorIndentGuide.background": "#111111",
+        "editorIndentGuide.activeBackground": "#222222",
+        "editor.selectionHighlightBorder": "#666666",
+        "editorHoverWidget.background": "#222222",
+        "editor.hoverHighlightBackground": "#222222"
+    },
+    
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+
+            // JSON Rules
+            {
+                "name": "Json-PropertyName",
+                "scope":"support.type.property-name",
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Json-PropertyContent",
+                "scope":[
+                    "string.quoted.double",
+                    "constant.language.json"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+
+            // C Rules
+            {
+                "name": "C-Preprocessor",
+                "scope":[
+                    "meta.preprocessor",
+                    "meta.preprocessor constant.numeric",
+                    "meta.preprocessor keyword.operator",
+                    "meta.preprocessor entity.name.function",
+                    "meta.preprocessor keyword.control.directive",
+                    "meta.preprocessor string.quoted",
+                    "meta.preprocessor string.quoted.double",
+                    "meta.preprocessor variable.parameter.preprocessor"
+
+                ],
+                "settings": {
+                    "foreground": "#00FF00",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "C-String",
+                "scope":[
+                    "meta.block string.quoted.double",
+                    "string.quoted.double constant.character.escape"
+                ],
+                "settings": {
+                    "foreground": "#FF00FF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "C-Keyword",
+                "scope": [
+                    "keyword.control",
+                    "storage.type",
+                    "support.type",
+                    "storage.modifier",
+                    "variable.language",
+                    "keyword.operator.cast"
+                ],
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "C-Operator",
+                "scope": "keyword.operator",
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "C-Number",
+                "scope":"constant.numeric",
+                "settings": {
+                    "foreground": "#FFA500",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "C-Type",
+                "scope":"entity.name.type",
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "C-Comments",
+                "scope":"comment",
+                "settings": {
+                    "foreground": "#8BC0F3",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "C-Function",
+                "scope": [
+                    "meta.function",
+                    "meta.function entity.name.function",
+                    "entity.name.function",
+                    "support.function"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "C-Constant",
+                "scope": "constant.language.c",
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "C-Variable",
+                "scope":[
+                    "variable",
+                    "support.type.posix-reserved.c"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": false,
+    "editor.renderWhitespace": "none",
+    "workbench.sideBar.location": "left",
+    "window.menuBarVisibility": "toggle",
+    "workbench.statusBar.feedback.visible": false,
+    "editor.minimap.enabled": false
+}
