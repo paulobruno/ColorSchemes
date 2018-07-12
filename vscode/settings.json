@@ -199,19 +199,31 @@
                 }
             },
 
-            // SH Rules
+            // SHELL Rules
             {
-                "name": "SH-environment",
+                "name": "Sh-Variable",
                 "scope":[
                     "string.other.math.shell",
                     "string.interpolated.dollar.shell",
+                    "variable.other.normal.shell"
                 ],
                 "settings": {
-                    "foreground": "#FF00FF"
+                    "foreground": "#FF00FF",
+                    "fontStyle": ""
                 }
             },
             {
-                "name": "SH-definition",
+                "name": "Sh-Backticks",
+                "scope":[
+                    "string.interpolated.backtick.shell"
+                ],
+                "settings": {
+                    "foreground": "#FFFF00",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Sh-Definition",
                 "scope":[
                     "punctuation.definition.comment.shebang.shell",
                     "comment.line.number-sign.shebang.shell"
