@@ -3,6 +3,7 @@
     "editor.renderIndentGuides": true,
     "editor.detectIndentation": false,
     "editor.insertSpaces": true,
+    "editor.tabCompletion": false,
 
     "files.exclude": {
         "**/.git": true,
@@ -87,13 +88,19 @@
                 "scope":[
                     "meta.preprocessor",
                     "meta.preprocessor constant.numeric",
+                    "meta.preprocessor constant.character.escape",
                     "meta.preprocessor keyword.operator",
+                    "meta.preprocessor keyword.operator.sizeof",
+                    "meta.preprocessor keyword.control",
                     "meta.preprocessor entity.name.function",
                     "meta.preprocessor keyword.control.directive",
                     "meta.preprocessor string.quoted",
                     "meta.preprocessor string.quoted.double",
-                    "meta.preprocessor variable.parameter.preprocessor"
-
+                    "meta.preprocessor string.quoted.double constant.character.escape",
+                    "meta.preprocessor support.function",
+                    "meta.preprocessor variable.parameter.preprocessor",
+                    "meta.preprocessor variable.other",
+                    "meta.preprocessor meta.function"
                 ],
                 "settings": {
                     "foreground": "#00FF00",
@@ -119,7 +126,8 @@
                     "support.type",
                     "storage.modifier",
                     "variable.language",
-                    "keyword.operator.cast"
+                    "keyword.operator.cast",
+                    "keyword.operator.sizeof"
                 ],
                 "settings": {
                     "foreground": "#FF0000",
@@ -189,6 +197,27 @@
                     "foreground": "#FFFFFF",
                     "fontStyle": ""
                 }
+            },
+
+            {
+                "name": "SH-variable",
+                "scope":[
+                    "string.other.math.shell",
+                    "string.interpolated.dollar.shell",
+                ],
+                "settings": {
+                    "foreground": "#FF00FF"
+                }
+            },
+            {
+                "name": "SH-definition",
+                "scope":[
+                    "punctuation.definition.comment.shebang.shell",
+                    "comment.line.number-sign.shebang.shell"
+                ],
+                "settings": {
+                    "foreground": "#00FF00"
+                }
             }
         ]
     },
@@ -198,5 +227,8 @@
     "workbench.sideBar.location": "left",
     "window.menuBarVisibility": "toggle",
     "workbench.statusBar.feedback.visible": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "newUntitledFile"
 }
