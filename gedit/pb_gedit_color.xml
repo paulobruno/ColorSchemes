@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ Alterado por Paulo Bruno de Sousa Serafim, Agosto/2013
+ Ultima alteração: Setembro/2015
+-->
+
+<!--
+
+ Author: Geraldo Albuquerque 
+ http://shellscriptbr.wordpress.com
+ http://aprendinolinux.wordpress.com
+ https://sites.google.com/site/shellscriptbr/
+ aprendinolinux@gmail.com - gerladotux@bol.com.br
+
+ Esta biblioteca é software livre, você pode redistribuí-la e/ou modificá-la 
+ sob os termos da GNU Library General Public License, conforme foi publicada 
+ pela Free Software Foundation; tanto a versão 2 da Licença, ou (a seu critério) 
+ qualquer versão posterior.
+
+ Esta biblioteca é distribuída na esperança que possa ser útil,  mas SEM 
+ QUALQUER GARANTIA, nem mesmo a garantia implícita de COMERCIALIZAÇÃO ou 
+ ADEQUAÇÃO PARA UM DETERMINADO PROPÓSITO. Veja a GNU Biblioteca General Public 
+ License para mais detalhes.
+
+ Você deve ter recebido uma cópia da Biblioteca GNU General Public
+ Licença, junto com este programa, se não, escreva para a
+ Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ Boston, MA 02111-1307, USA.
+
+ Mais detalhes: http://pt.wikipedia.org/wiki/Licen%C3%A7a_P%C3%BAblica_GNU
+
+-->
+<style-scheme id="pb_color" _name="pb_color" version="1.0">
+
+  <author>Geraldo Albuquerque (versao por Paulo Bruno)</author>
+  <_description> Cores utilizadas por Paulo B. S. Serafim </_description>
+
+  <!-- Côres, tons abobora, amarelo e laranja -->
+  <color name="abobora"          value="#FFA500"/>
+  <color name="amarelo"          value="#FFFF00"/>
+  <color name="amarelao"         value="#FFD200"/>
+  <color name="amarelo_abobora"  value="#ff9900"/>
+  <color name="amarelo_claro"    value="#F5C54D"/>
+  <color name="amarelo_limao"    value="#ACC900"/>
+  <color name="laranja"          value="#FFA500"/>
+  <color name="laranja1"         value="#ff6100"/>
+  <color name="laranjao"         value="#F8640A"/>
+  <!-- Côres, tonalidade azuladas -->
+  <color name="agua"             value="#00d8ff"/>
+  <color name="azul"             value="#0000FF"/>
+  <color name="azul2"            value="#009cff"/>
+  <color name="azul3"            value="#4f94cd"/>
+  <color name="azul_agua"        value="#8BC0F3"/>
+  <color name="azul_bebe"        value="#ADD8E6"/>
+  <color name="azul_clarinho"    value="#E6E6FA"/>
+  <color name="azul_dark"        value="#001B33"/>
+  <color name="azul_escurao"     value="#000d1a"/>
+  <color name="azul_fraquinho"   value="#dddeee"/>
+  <color name="azul_leve"        value="#0065bf"/>
+  <color name="azul_marinho"     value="#000080"/>
+  <color name="azul_medio"       value="#003b70"/>
+  <color name="azul_piscina"     value="#1E90FF"/>
+  <color name="azul_bebezinho"  value="#97E1FF"/>
+  <color name="azul_brilhante"  value="#00fffa"/>
+  <!-- Côres brancas -->
+  <color name="branco"           value="#FFFFFF"/>
+  <color name="branco_brilho"    value="#EEEEEE"/>
+  <color name="branco_fosco"     value="#F0E9E9"/>
+  <color name="branco_cinza"     value="#A5A5A5"/>
+  
+  <!-- Côres, tons de cinza -->
+  <color name="carbono"          value="#232323"/>
+  <color name="cinza"            value="#7F7F7F"/>
+  <color name="cinza_bebe"       value="#E5E5E5"/>
+  <color name="cinza_clarinho"   value="#CCCCCC"/>
+  <color name="cinza_claro"      value="#BFBFBF"/>
+  <color name="cinza_escurinho"  value="#4D4D4D"/>
+  <color name="cinza_escuro"     value="#333333"/>
+  <color name="cinza_fosco"      value="#808080"/>
+  <color name="cinza_medio"      value="#BBBBBB"/>
+  <color name="cinza_prata"      value="#c0c0c0"/>
+  <color name="asfalto"          value="#555753"/>
+  <!-- Côres, tons de cinza -->
+  <color name="magenta"          value="#008080"/>
+  <color name="magenta_forte"    value="#ff44cc"/>
+  <color name="magenta_light"    value="#FF79D9"/>
+  <!-- Côres, tons de marrom -->
+  <color name="marrom"           value="#8B6914"/>
+  <color name="marrom_claro"     value="#C89F36"/>
+  <color name="marrom_escuro"    value="#654B09"/>
+  <color name="marrom_terra"     value="#777777"/>
+  <!-- Côres, tonalidade negra -->
+  <color name="preto"            value="#000000"/>
+  <color name="preto_fosco"      value="#1A1A1A"/>
+  <!-- Côres, tons rosas, roxos, lilas e purpurinas -->
+  <color name="purpurina"        value="#F02093"/>
+  <color name="purpura_escura"   value="#800080"/>
+  <color name="rosa"             value="#FFC0CB"/>
+  <color name="roxa"             value="#FF00FF"/>
+  <color name="roxinha"          value="#F02094"/>
+  <color name="roxo_claro"       value="#ADB2FF"/>
+  <color name="roxo_pupura"      value="#BB66FF"/>
+  <color name="roxo_pupurina"    value="#A020F0"/>
+  <color name="violeta"          value="#9E91FF"/>
+  <!-- Côres, tons em vermelho -->
+  <color name="vermelho"         value="#FF0000"/>
+  <color name="vermelho_claro"   value="#F24343"/>
+  <color name="vermelho_fosco"   value="#7D0E0E"/>
+  <color name="vermelho_lajota"  value="#FF3A35"/>
+  <color name="vermelho_rosa"    value="#ff2f6a"/>
+  <color name="vermelho_tijolo"  value="#800000"/>
+  <!-- Côres, tons em verde -->
+  <color name="verde"            value="#00FF00"/>
+  <color name="verde_alga"       value="#00c99b"/>
+  <color name="verde_abacate"    value="#00c900"/>
+  <color name="verde_bebe"       value="#90EE90"/>
+  <color name="verde_brilho"     value="#96ff00"/>
+  <color name="verde_clarinho"   value="#80FFBB"/>
+  <color name="verde_dark"       value="#002f29"/>
+  <color name="verde_escuro"     value="#008000"/>
+  <color name="verde_oliva"      value="#808000"/>
+  <color name="verde_limao"      value="#00FF00"/>
+  <color name="verde_limao1"     value="#3AD900"/>
+
+  <!-- Configurações gerais -->
+  <style 
+name="current-line" 
+background="cinza_escuro"
+  /> <!-- Côr de frente/fundo da linha do cursor atual. -->
+  <style 
+name="cursor"
+        foreground="amarelo" 
+background="amarelo"
+  /> <!-- Côr que do cursor piscando na linha atual. -->
+  <style 
+name="line-numbers"
+foreground="cinza_fosco"
+background="asfalto"
+  /> <!-- Se ativar número de linhas, Côr de fundo e frente. -->
+  <style 
+name="secondary-cursor"
+background="amarelo_claro"
+  /> <!-- Côr de frente do cursor secundário. -->
+  <style 
+name="selection"
+foreground="preto"
+background="cinza_claro"
+  /> <!-- Côr frente/fundo quando seleciona algum trecho na linha. -->
+  <style 
+name="selection-unfocused"
+foreground="branco"
+background="cinza"
+  /> <!-- Côr frente/fundo de áreas selecionadas ou pesquisadas no texto. -->
+  <style 
+name="text"
+foreground="branco"
+background="preto"
+  /> <!-- Côr do texto sendo digitado e outras áreas de texto. *sh*-->
+
+  <!-- Côr da Margem do lado direito -->
+  <style 
+name="right-margin"         
+background="cinza_escuro" 
+foreground="cinza_bebe"
+  />
+
+  <!-- ESTILO PADRÃO GERAL -->
+  <!-- Destacar locais de pesquisas e fechamentos de chaves, aspas, etc. -->
+  <style 
+name="bracket-match"
+foreground="azul_agua"
+background="azul_marinho"
+bold="true"
+  />
+  <style 
+name="bracket-mismatch"
+foreground="vermelho"
+background="amarelo"
+bold="true"
+  />
+  <style 
+name="search-match"
+foreground="vermelho"
+background="amarelo"
+bold="true"
+  />
+
+  <!-- Comentários -->
+  <style 
+name="def:comment" 
+foreground="azul_agua" 
+italic="true"
+  /> <!-- Somente linhas iniciadas com # para Comentar código *sh* -->
+
+  <style name="def:doc-comment-element" 
+foreground="cinza" 
+italic="true"
+  />
+
+  <!-- Padrão para constantes, comandos e variáveis-->
+  <style 
+name="def:number"
+foreground="laranja"
+bold="false"
+  /> <!-- Números inteiros em C,phyton,java, etc... sem efeito em sh-->
+  <style 
+name="def:decimal"
+foreground="laranja"
+  /> <!-- Números inteiros em C,phyton,java, etc... sem efeito em sh-->
+  <style 
+name="def:base-n-integer"
+foreground="vermelho"
+  /> <!-- Números inteiros em C,phyton,java, etc... sem efeito em sh-->
+  <style 
+name="def:boolean"
+foreground="laranja"
+bold="false"
+  /> <!-- Números inteiros em C,phyton,java, etc... sem efeito em sh-->
+  <style 
+name="def:floating-point"
+foreground="laranja"
+  /> <!-- Ponto flutuante em C,ruby,phyton,java,etc...sem efeito em sh -->
+  <style 
+name="def:complex"
+foreground="branco"
+  /> <!-- -->
+  <style 
+name="def:builtin"
+foreground="branco"
+bold="true"
+  /> <!--  -->
+  <style 
+name="def:character"
+foreground="rosa"
+  /> <!--  -->
+  <style 
+name="def:constant"
+foreground="vermelho"
+bold="true"
+  /> <!-- Definições de constantes, não válido em sh no gedit -->
+  <style 
+name="def:keyword"
+foreground="vermelho"
+bold="true"
+  /> <!-- No gedit em *sh*, equivale a comandos -->
+  <style 
+name="def:shebang"
+foreground="verde_limao" 
+bold="true"
+  /> <!-- Cabeçalho #! -->
+  <style 
+name="def:escape"
+foreground="violeta"
+  /> <!-- destaque barra escapes \  -->
+  <style 
+name="def:special-char"
+foreground="roxa"
+  /> <!-- Locais onde estão sendo usados escapes. -->
+  <style 
+name="def:special-character"
+foreground="violeta"
+bold="true"
+  /> <!--  -->
+  <style 
+name="def:special-constant"
+foreground="branco"
+  /> <!--  -->
+  <style 
+name="def:string"
+foreground="roxa"
+  /> <!-- No gedit em *sh*,Strings , strings -->  
+  <style 
+name="def:variable"
+foreground="verde_oliva"
+  /> <!--  -->
+
+  <!-- Identificadores -->
+  <style 
+name="def:function" 
+foreground="verde_abacate" 
+bold="true" 
+italic="true"
+  /> <!-- Nome de funções em *sh* -->
+  <style 
+name="def:identifier" 
+use-style="def:function"
+  /> <!-- No gedit em *sh* = nome de funções -->
+
+  <!-- Declarações -->
+  <style 
+name="def:statement" 
+foreground="vermelho" 
+background="preto" 
+bold="false"
+  />
+  <!-- Tipos -->
+  <style 
+name="def:type" 
+foreground="vermelho" 
+bold="true"
+  /> <!-- Definições e uso de variáveis em *sh* -->
+
+  <!-- Outros -->
+  <style 
+name="def:error" 
+foreground="branco" 
+background="vermelho" 
+bold="false"
+  />
+  <style 
+name="def:net-address-in-comment" 
+foreground="azul_bebezinho" 
+underline="true" 
+bold="true"
+italic="true" 
+  />
+  <style 
+name="def:underlined" 
+use-style="def:net-address-in-comment"
+  /> <!-- Define underline em links nos comentários em *sh* -->
+
+  <style 
+name="def:note" 
+foreground="vermelho" 
+background="preto" 
+bold="true" 
+italic="true"
+  /> <!-- Notas *sh* FIXME,TODO,XXX -->
+
+  <style 
+name="def:preprocessor" 
+foreground="verde_limao" 
+bold="false"
+  />
+  <style 
+name="def:specials" 
+foreground="branco" 
+background="roxo"
+  />
+  <style 
+name="def:others"
+use-style="def:keyword"
+  /> 
+  <style 
+name="def:others 2" 
+foreground="vermelho"
+  />
+  <style 
+name="def:others 3" 
+foreground="vermelho"
+  />
+
+
+  <style 
+name="def:here-doc-bound"
+use-style="def:keyword"
+  />
+  <style 
+name="def:common-command"
+use-style="def:keyword"
+  /> 
+  <style 
+name="def:subshell"
+use-style="def:preprocessor"
+  /> 
+  <style 
+name="def:variable"
+use-style="def:type"
+  />
+
+  <style 
+name="def:variable-definition"
+use-style="def:variable"
+  />
+
+  <!-- Comparações -->
+  <style 
+name="diff:added-line"   
+foreground="rosa"
+  />
+  <style 
+name="diff:changed-line" 
+foreground="vermelho"
+  />
+  <style 
+name="diff:diff-file"    
+foreground="amarelo"
+  />
+  <style 
+name="diff:ignore"       
+foreground="cinza"
+  />
+  <style 
+name="diff:location"     
+foreground="azul"
+  />
+  <style 
+name="diff:removed-line" 
+foreground="magenta"
+  />
+  <style 
+name="diff:special-case" 
+foreground="verde"
+  />
+
+  <!-- ESTILOS DE LINGUAGENS - Válidos para ALGUNS editores. 
+       EXEMPLOS: configurações de cor via arquivo xml.
+   
+   Em tese você já deve ter definido todas as côres necessárias.
+   Abaixo incluído as diferenciações nas linguagens para uso de estilos.
+   As sugestões para uso de estilos segue o padrão de cada linguagem.
+   Se você já definiu suas preferências de côres, os estilos já devem
+   estar colorindo corretamente cada arquivo. 
+   
+   Para saber qual é o padrão definido para cada linguagem, veja em:
+   
+   /usr/share/gtksourceview-2.0/language-specs
+   
+   Cada linguagem tem um arquivo de definições, ex: c.lang, ruby.lang,
+   xml.lang, java.lang, sh.lang, etc...
+   
+   Este arquivo é uma base para você fazer seus próprios ajustes de côres.
+   Espero que tenha apreciado este trabalho e não a definição de côres. ;)
+   
+   Os arquivos XML para vocẽ alterar estão normalmente no diretório:
+   $HOME/.gnome2/gedit/styles 
+  -->
+
+  <!-- Estilos de XML -->
+  <style name="xml:element-name" foreground="verde_limao"/>
+  <style name="xml:attribute-name" foreground="vermelho"/>
+  <style name="xml:attribute-value" foreground="branco" italic="true"/>
+
+  <!-- Estilos Ruby -->
+
+  <style name="ruby:attribute-definition" use-style="def:special-char"/>
+  <style name="ruby:base-n-integer"       use-style="def:base-n-integer"/>
+  <style name="ruby:boolean"              use-style="def:boolean"/> 
+  <style name="ruby:builtin"              use-style="def:type"/>
+  <style name="ruby:comment"              use-style="def:comment"/>
+  <style name="ruby:constant"             use-style="def:type"/>
+  <style name="ruby:escape"               use-style="def:special-char"/>
+  <style name="ruby:decimal"              use-style="def:decimal"/>
+  <style name="ruby:floating-point"       use-style="def:floating-point"/>
+  <style name="ruby:here-doc"             use-style="def:string"/>
+  <style name="ruby:here-doc-bound"       use-style="def:string"/>
+  <style name="ruby:keyword"              use-style="def:keyword"/> 
+  <style name="ruby:module-handler"       use-style="def:preprocessor"/>
+  <style name="ruby:nil-value"            use-style="def:special-constant"/>
+  <style name="ruby:numeric-literal"      use-style="def:base-n-integer"/>
+  <style name="ruby:predefined-variable"  use-style="def:identifier"/>
+  <style name="ruby:regex"                use-style="def:identifier"/>
+  <style name="ruby:special-variable"     use-style="def:identifier"/>
+  <style name="ruby:symbol"               use-style="def:string"/>
+  <style name="ruby:string-conversion"    use-style="def:string"/>
+  <style name="ruby:string"               use-style="def:string"/>
+  <style name="ruby:variable"             use-style="def:identifier"/>
+
+<!-- Estilos python -->
+
+  <style name="python:base-n-integer"       use-style="def:base-n-integer"/>
+  <style name="python:boolean"              use-style="def:boolean"/> 
+  <style name="python:builtin-constant"     use-style="def:special-constant"/>
+  <style name="python:builtin-function"     use-style="def:builtin"/>
+  <style name="python:builtin-object"       use-style="def:type"/>
+  <style name="python:complex"              use-style="def:complex"/> 
+  <style name="python:escape-char"          use-style="def:special-char"/>
+  <style name="python:decimal"              use-style="def:decimal"/>
+  <style name="python:floating-point"       use-style="def:floating-point"/>
+  <style name="python:format"               use-style="def:character"/>
+  <style name="python:keyword"              use-style="def:keyword"/> 
+  <style name="python:module-handler"       use-style="def:preprocessor"/>
+  <style name="python:multiline-string"     use-style="def:string"/>
+  <style name="python:string-conversion"    use-style="def:string"/>
+  <style name="python:special-variable"     use-style="def:variable"/>
+
+<!-- Estilos C -->
+
+  <style name="c:boolean"              use-style="def:boolean"/> 
+  <style name="c:char"                 use-style="def:character"/> 
+  <style name="c:common-defines"       use-style="def:special-constant"/> 
+  <style name="c:decimal"              use-style="def:decimal"/>
+  <style name="c:escaped-character"    use-style="def:special-char"/>
+  <style name="c:floating-point"       use-style="def:floating-point"/>
+  <style name="c:hexadecimal"          use-style="def:base-n-integer"/>
+  <style name="c:included-file"        use-style="def:preprocessor"/>
+  <style name="c:keyword"              use-style="def:keyword"/> 
+  <style name="c:octal"                use-style="def:base-n-integer"/>
+  <style name="c:preprocessor"         use-style="def:preprocessor"/>
+  <style name="c:printf"               use-style="def:special-char"/>
+  <style name="c:storage-class"        use-style="def:type"/>
+  <style name="c:string"               use-style="def:string"/>
+  <style name="c:variable"             use-style="def:identifier"/>
+  <style name="c:type"                 use-style="def:type"/>
+
+<!-- Estilos php -->
+
+  <style name="php:boolean"              use-style="def:boolean"/> 
+  <style name="php:decimal"              use-style="def:decimal"/>
+  <style name="php:escape"               use-style="def:special-constant"/>
+  <style name="php:floating-point"       use-style="def:floating-point"/>
+  <style name="php:here-doc"             use-style="def:string"/>
+  <style name="php:here-doc-bound"       use-style="def:keyword"/>
+  <style name="php:hexadecimal"          use-style="def:base-n-integer"/>
+  <style name="php:module-handler"       use-style="def:preprocessor"/>
+  <style name="php:null-value"           use-style="def:special-constant"/>
+  <style name="php:octal"                use-style="def:base-n-integer"/>
+  <style name="php:operador"             use-style="def:keyword"/>
+  <style name="php:predefined-variable"  use-style="def:identifier"/>
+  <style name="php:regex"                use-style="def:identifier"/>
+  <style name="php:special-variable"     use-style="def:identifier"/>
+  <style name="php:symbol"               use-style="def:keyword"/>
+  <style name="php:variable"             use-style="def:identifier"/>
+
+<!-- Estilos Perl -->
+
+  <style name="perl:control"              use-style="def:preprocessor"/>
+  <style name="perl:include-statement"    use-style="def:preprocessor"/>
+  <style name="perl:file-descriptor"      use-style="def:special-constant"/>
+  <style name="perl:here-doc"             use-style="def:string"/>
+  <style name="perl:here-doc-bound"       use-style="def:string"/>
+  <style name="perl:line-directive"       use-style="def:preprocessor"/>
+  <style name="perl:operator"             use-style="def:keyword"/> 
+  <style name="perl:pod"                  use-style="def:comment"/>
+  <style name="perl:pod-escape"           use-style="def:special-char"/>
+  <style name="perl:pod-keyword"          use-style="def:keyword"/>
+  <style name="perl:pod-heading"          use-style="def:doc-comment-element"/>
+  <style name="perl:regex"                use-style="def:string"/>
+  <style name="perl:system-command"       use-style="def:string"/>
+  <style name="perl:variable"             use-style="def:type"/>
+  <style name="perl:variable-definition"  use-style="def:variable"/>
+
+<!-- Estilos Java -->
+
+  <style name="java:char"                 use-style="def:character"/>
+  <style name="java:declaration"          use-style="def:type"/>
+  <style name="java:escaped-character"    use-style="def:special-char"/>
+  <style name="java:external"             use-style="def:preprocessor"/>
+  <style name="java:null-value"           use-style="def:special-constant"/>
+  <style name="java:number"               use-style="def:decimal"/>
+  <style name="java:reserved"             use-style="def:keyword"/> 
+  <style name="java:scope-declaration"    use-style="def:type"/>
+  <style name="java:storage-class"        use-style="def:type"/>
+
+<!-- Estilos JavaScript js -->
+
+  <style name="js:constructors"           use-style="def:type"/>
+  <style name="js:future-words"           use-style="def:error"/>
+  <style name="js:null-value"             use-style="def:special-constant"/>
+  <style name="js:object"                 use-style="def:keyword"/> 
+  <style name="js:properties"             use-style="def:statement"/> 
+  <style name="js:undefined-value"        use-style="def:special-constant"/>
+
+<!-- Estilos sh -->
+
+  <style name="sh:common-command"       use-style="def:keyword"/> 
+  <style name="sh:here-doc-bound"       use-style="def:keyword"/>
+  <style name="sh:others"               use-style="def:keyword"/> 
+  <style name="sh:subshell"             use-style="def:preprocessor"/> 
+  <style name="sh:variable"             use-style="def:type"/>
+  <style name="sh:variable-definition"  use-style="def:variable"/>
+
+<!-- Estilos pb -->
+
+  <style name="pb:comment"      foreground="azul_agua"    italic="true"/>
+  <style name="pb:title"       	foreground="amarelo"    bold="true"/>
+  <style name="pb:subtitle"     foreground="branco"     bold="true"		italic ="true"/>
+  <style name="pb:bullet"       foreground="vermelho"	bold="true"/>
+  <style name="pb:numbering"    foreground="verde_limao"   italic ="true"/>
+
+</style-scheme>
