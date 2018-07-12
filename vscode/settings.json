@@ -199,8 +199,9 @@
                 }
             },
 
+            // SH Rules
             {
-                "name": "SH-variable",
+                "name": "SH-environment",
                 "scope":[
                     "string.other.math.shell",
                     "string.interpolated.dollar.shell",
@@ -217,6 +218,107 @@
                 ],
                 "settings": {
                     "foreground": "#00FF00"
+                }
+            },
+
+            // PYTHON Rules
+            {
+                "name": "Python-comment",
+                "scope":[
+                    "punctuation.definition.comment.python",
+                    "comment.line.number-sign.python"
+                ],
+                "settings": {
+                    "foreground": "#8BC0F3",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Python-doc-comment",
+                "scope":[
+                    "string.quoted.docstring.multi.python"
+                ],
+                "settings": {
+                    "foreground": "#8BC0F3",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Python-string",
+                "scope":[
+                    "string.quoted.single.python",
+                    "constant.character.escape.python",
+                    "constant.character.format.placeholder.other.python"
+                ],
+                "settings": {
+                    "foreground": "#FF00FF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Python-internal",
+                "scope":[
+                    "keyword.control.flow.python",
+                    "support.variable.magic.python",
+                    "keyword.operator.logical.python",
+                    "support.type.python",
+                    "variable.legacy.builtin.python",
+                    "support.function.builtin.python"
+                ],
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Python-import",
+                "scope":[
+                    "keyword.control.import.python",
+                ],
+                "settings": {
+                    "foreground": "#FF0000"
+                }
+            },
+            {
+                "name": "Python-function",
+                "scope":[
+                    "entity.name.function.python",
+                    "support.function.magic.python",
+                    "storage.type.function.python"
+                ],
+                "settings": {
+                    "foreground": "#00FF00",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Python-class",
+                "scope":[
+                    "entity.name.type.class.python",
+                    "storage.type.class.python"
+                ],
+                "settings": {
+                    "foreground": "#00FF00",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Python-text-other",
+                "scope":[
+                    "invalid.deprecated.semicolon.python"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF"
+                }
+            },
+            {
+                "name": "Python-constant",
+                "scope":[
+                    "constant.language.python"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": "italic"
                 }
             }
         ]
