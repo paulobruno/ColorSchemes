@@ -276,7 +276,8 @@
                     "keyword.control.import.python",
                 ],
                 "settings": {
-                    "foreground": "#FF0000"
+                    "foreground": "#FF0000",
+                    "fontStyle": ""
                 }
             },
             {
@@ -308,7 +309,8 @@
                     "invalid.deprecated.semicolon.python"
                 ],
                 "settings": {
-                    "foreground": "#FFFFFF"
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
                 }
             },
             {
@@ -319,6 +321,80 @@
                 "settings": {
                     "foreground": "#FFFFFF",
                     "fontStyle": "italic"
+                }
+            },
+
+            // JAVA Rules
+            {
+                "name": "Java-import",
+                "scope":[
+                    "keyword.other.package.java",
+                    "keyword.other.import.java"
+                ],
+                "settings": {
+                    "foreground": "#00FF00",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Java-keyword",
+                "scope":[
+                    "keyword.control.new.java",
+                    "storage.type.primitive.java",
+                    "storage.type.primitive.array.java",
+                    "punctuation.section.class.begin.bracket.curly.java",
+                    "punctuation.section.class.end.bracket.curly.java",
+                    "punctuation.section.method.begin.bracket.curly.java",
+                    "punctuation.section.method.end.bracket.curly.java",
+                    "punctuation.section.block.begin.bracket.curly.java",
+                    "punctuation.section.block.end.bracket.curly.java"
+                ],
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Java-custom-types",
+                "scope":[
+                    "storage.type.java",
+                    "storage.type.object.array.java",
+                    "storage.type.generic.java"
+                ],
+                "settings": {
+                    "foreground": "#FFBBBB",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Java-text-other",
+                "scope":[
+                    "keyword.control.ternary.java",
+                    "storage.type.function.arrow.java"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Java-constant",
+                "scope":[
+                    "constant.language.java"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Java-string",
+                "scope":[
+                    "string.quoted.single.java"
+                ],
+                "settings": {
+                    "foreground": "#FF00FF",
+                    "fontStyle": ""
                 }
             }
         ]
