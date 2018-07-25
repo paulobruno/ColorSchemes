@@ -35,5 +35,13 @@
             "}"
         ],
         "description": "Foor loop"
+    },
+
+    "OpenCV_Function_Header": {
+        "prefix": "funcopencv",
+        "body": [
+            "void ${1:function}(const cv::Mat& src, cv::Mat& dst);$0"
+        ],
+        "description": "Header of a OpenCV-like function"
     }
 }
