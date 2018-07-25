@@ -183,7 +183,7 @@
                 "name": "C-Constant",
                 "scope": "constant.language.c",
                 "settings": {
-                    "foreground": "#FFFFFF",
+                    "foreground": "#FFA500",
                     "fontStyle": ""
                 }
             },
