@@ -29,7 +29,7 @@
     "For_Loop": {
         "prefix": "for",
         "body": [
-            "for (${1:int} ${2:i}${3: = 0}; $2 < ${4:count}; ++$2)",
+            "for (${1:unsigned int} ${2:i}${3: = 0}; $2 < ${4:count}; ++$2)",
             "{",
             "\t$0",
             "}"
@@ -40,8 +40,21 @@
     "OpenCV_Function_Header": {
         "prefix": "funcopencv",
         "body": [
-            "void ${1:function}(const cv::Mat& src, cv::Mat& dst);$0"
+            "void ${1:function}(const cv::Mat& pSrc, cv::Mat& pDst);$0"
         ],
         "description": "Header of a OpenCV-like function"
+    },
+
+    "Header_Definition": {
+        "prefix": "#ifndef",
+        "body": [
+            "#ifndef $1_H",
+            "#define $1_H",
+            "",
+            "$0",
+            "",
+            "#endif // $1_H"
+        ],
+        "description": "Define header if not defined"
     }
 }
