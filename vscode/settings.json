@@ -205,7 +205,9 @@
                 "scope":[
                     "string.other.math.shell",
                     "string.interpolated.dollar.shell",
-                    "variable.other.normal.shell"
+                    "variable.other.normal.shell",
+                    "variable.other.loop.shell",
+                    "string.quoted.double.shell",
                 ],
                 "settings": {
                     "foreground": "#FF00FF",
@@ -232,7 +234,17 @@
                     "foreground": "#00FF00"
                 }
             },
-
+            {
+                "name": "Sh-Function",
+                "scope":[
+                    "support.function.builtin.shell"
+                ],
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": "bold"
+                }
+            },
+            
             // PYTHON Rules
             {
                 "name": "Python-comment",
@@ -412,7 +424,7 @@
         ]
     },
     "workbench.activityBar.visible": true,
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "editor.renderWhitespace": "none",
     "workbench.sideBar.location": "left",
     "window.menuBarVisibility": "toggle",
@@ -420,5 +432,6 @@
     "editor.minimap.enabled": false,
     "window.zoomLevel": 0,
     "explorer.confirmDragAndDrop": false,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.rendererType": "dom"
 }
