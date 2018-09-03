@@ -108,10 +108,23 @@
                 }
             },
             {
+                "name": "C-CompilerDirective",
+                "scope":[
+                    "keyword.control.directive.pragma",
+                    "entity.other.attribute-name.pragma"
+                ],
+                "settings": {
+                    "foreground": "#FFa500",
+                    "fontStyle": ""
+                }
+            },
+            {
                 "name": "C-String",
                 "scope":[
                     "meta.block string.quoted.double",
-                    "string.quoted.double constant.character.escape"
+                    "string.quoted.double constant.character.escape",
+                    "string.quoted.single",
+                    "constant.character.escape"
                 ],
                 "settings": {
                     "foreground": "#FF00FF",
