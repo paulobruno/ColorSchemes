@@ -371,7 +371,8 @@
                     "punctuation.section.method.begin.bracket.curly.java",
                     "punctuation.section.method.end.bracket.curly.java",
                     "punctuation.section.block.begin.bracket.curly.java",
-                    "punctuation.section.block.end.bracket.curly.java"
+                    "punctuation.section.block.end.bracket.curly.java",
+                    "keyword.operator.instanceof.java"
                 ],
                 "settings": {
                     "foreground": "#FF0000",
@@ -386,7 +387,7 @@
                     "storage.type.generic.java"
                 ],
                 "settings": {
-                    "foreground": "#FFBBBB",
+                    "foreground": "#ff0000",
                     "fontStyle": ""
                 }
             },
@@ -394,7 +395,13 @@
                 "name": "Java-text-other",
                 "scope":[
                     "keyword.control.ternary.java",
-                    "storage.type.function.arrow.java"
+                    "storage.type.function.arrow.java",
+                    "punctuation.section.method.begin.bracket.curly.java",
+                    "punctuation.section.method.end.bracket.curly.java",
+                    "punctuation.section.block.begin.bracket.curly.java",
+                    "punctuation.section.block.end.bracket.curly.java",
+                    "punctuation.section.class.begin.bracket.curly.java",
+                    "punctuation.section.class.end.bracket.curly.java"
                 ],
                 "settings": {
                     "foreground": "#FFFFFF",
@@ -433,5 +440,6 @@
     "window.zoomLevel": 0,
     "explorer.confirmDragAndDrop": false,
     "workbench.startupEditor": "newUntitledFile",
-    "terminal.integrated.rendererType": "dom"
+    "terminal.integrated.rendererType": "dom",
+    "python.pythonPath": "python3.6"
 }
