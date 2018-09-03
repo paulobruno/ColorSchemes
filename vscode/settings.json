@@ -206,8 +206,8 @@
                     "string.other.math.shell",
                     "string.interpolated.dollar.shell",
                     "variable.other.normal.shell",
-                    "variable.other.loop.shell",
                     "string.quoted.double.shell",
+                    "variable.other.bracket.shell"
                 ],
                 "settings": {
                     "foreground": "#FF00FF",
@@ -217,7 +217,8 @@
             {
                 "name": "Sh-Backticks",
                 "scope":[
-                    "string.interpolated.backtick.shell"
+                    "string.interpolated.backtick.shell",
+                    "variable.other.loop.shell",
                 ],
                 "settings": {
                     "foreground": "#FFFF00",
@@ -237,7 +238,8 @@
             {
                 "name": "Sh-Function",
                 "scope":[
-                    "support.function.builtin.shell"
+                    "support.function.builtin.shell",
+                    "variable.other.positional"
                 ],
                 "settings": {
                     "foreground": "#FF0000",
