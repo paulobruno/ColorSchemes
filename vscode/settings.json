@@ -471,5 +471,22 @@
     "explorer.confirmDragAndDrop": false,
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.rendererType": "dom",
-    "python.pythonPath": "python3.6"
+    "python.pythonPath": "python3.6",
+
+    "doxdocgen.file.versionTag": "@version 1.0",
+    "doxdocgen.generic.authorEmail": "gitlab.com/paulobruno",
+    "doxdocgen.generic.authorName": "Paulo Bruno Serafim",
+    "doxdocgen.generic.dateFormat": "YYYY-MM-DD",
+    "doxdocgen.file.fileOrder": [
+        "file",
+        "author",
+        "empty",
+        "brief",
+        "empty",
+        "version",
+        "date",
+        "empty",
+        "copyright",
+        "custom"
+    ]
 }
