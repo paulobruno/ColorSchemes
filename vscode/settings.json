@@ -50,6 +50,11 @@
         // editor settings
         "editor.background": "#000000",
         "editor.foreground": "#ffffff",
+        "editorLineNumber.foreground": "#555",
+        "editorLineNumber.activeForeground": "#999",
+        "editor.lineHighlightBackground": "#000",
+        "editor.lineHighlightBorder": "#000",
+        "editorCursor.foreground": "#aaa",
         "editorBracketMatch.background": "#000080",
         "editorBracketMatch.border": "#000080",
         "editorRuler.foreground": "#222222",
@@ -167,7 +172,28 @@
             },
             {
                 "name": "C-Type",
-                "scope":"entity.name.type",
+                "scope": [
+                    "entity.name.type",
+                    "constant.language.cpp",
+                    "variable.other.member.cpp",
+                    "variable.parameter.probably.cpp",
+                    "meta.function-call.cpp",
+                    "meta.function-call.member.cpp",
+                    "punctuation.definition.begin.bracket.square.cpp",
+                    "punctuation.definition.end.bracket.square.cpp",
+                    "punctuation.section.arguments.begin.bracket.round.cpp",
+                    "punctuation.section.arguments.end.bracket.round.cpp",
+                    "punctuation.section.parens.begin.bracket.round.cpp",
+                    "punctuation.section.parens.end.bracket.round.cpp",
+                    "punctuation.section.arguments.begin.bracket.round.function.member.cpp",
+                    "punctuation.section.arguments.end.bracket.round.function.member.cpp",
+                    "punctuation.section.block.begin.bracket.curly.cpp",
+                    "punctuation.section.block.end.bracket.curly.cpp",
+                    "punctuation.terminator.statement.cpp",
+                    "punctuation.section.parameters.begin.bracket.round.cpp",
+                    "punctuation.section.parameters.end.bracket.round.cpp",
+                    "punctuation.separator.dot-access.cpp"
+                ],
                 "settings": {
                     "foreground": "#FFFFFF",
                     "fontStyle": ""
@@ -175,7 +201,10 @@
             },
             {
                 "name": "C-Comments",
-                "scope":"comment",
+                "scope": [
+                    "comment",
+                    "punctuation.definition.comment.cpp"
+                ],
                 "settings": {
                     "foreground": "#8BC0F3",
                     "fontStyle": "italic"
@@ -488,5 +517,6 @@
         "empty",
         "copyright",
         "custom"
-    ]
+    ],
+    "workbench.colorTheme": "Quiet Light"
 }
