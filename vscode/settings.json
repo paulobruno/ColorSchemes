@@ -70,22 +70,61 @@
 
             // JSON Rules
             {
+                "name": "teste",
+                "scope": [
+                ],
+                "settings": {
+                    "foreground": "#00ff00",
+                    "fontStyle": "bold"
+                }
+            },
+            {
                 "name": "Json-PropertyName",
-                "scope":"support.type.property-name",
+                "scope": [
+                    "support.type.property-name",
+                ],
                 "settings": {
                     "foreground": "#FF0000",
                     "fontStyle": "bold"
                 }
             },
             {
+                "name": "Json-PropertySeparator",
+                "scope": [
+                    "punctuation.definition.array.begin.json.comments",
+                    "punctuation.definition.array.end.json.comments",
+                    "punctuation.support.type.property-name.begin.json.comments",
+                    "punctuation.support.type.property-name.end.json.comments",
+                    "punctuation.separator.dictionary.key-value.json.comments",
+                    "punctuation.definition.dictionary.begin.json.comments",
+                    "punctuation.definition.dictionary.end.json.comments",
+                ],
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": ""
+                }
+            },
+            {
                 "name": "Json-PropertyContent",
                 "scope":[
                     "string.quoted.double",
-                    "constant.language.json"
+                    "constant.language.json",
+                    "punctuation.separator.dictionary.pair.json.comments",
+                    "punctuation.definition.string.begin.json.comments",
+                    "punctuation.definition.string.end.json.comments",
+                    "punctuation.separator.array.json.comments"
                 ],
                 "settings": {
                     "foreground": "#FFFFFF",
                     "fontStyle": ""
+                }
+            },
+            {
+                "name": "Json-Comments",
+                "scope": "punctuation.definition.comment.json.comments",
+                "settings": {
+                    "foreground": "#8BC0F3",
+                    "fontStyle": "bold"
                 }
             },
 
@@ -192,7 +231,8 @@
                     "punctuation.terminator.statement.cpp",
                     "punctuation.section.parameters.begin.bracket.round.cpp",
                     "punctuation.section.parameters.end.bracket.round.cpp",
-                    "punctuation.separator.dot-access.cpp"
+                    "punctuation.separator.dot-access.cpp",
+                    "punctuation.section"
                 ],
                 "settings": {
                     "foreground": "#FFFFFF",
@@ -517,6 +557,5 @@
         "empty",
         "copyright",
         "custom"
-    ],
-    "workbench.colorTheme": "Quiet Light"
+    ]
 }
