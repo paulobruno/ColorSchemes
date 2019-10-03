@@ -526,6 +526,90 @@
                     "foreground": "#FF0000",
                     "fontStyle": "italic"
                 }
+            },
+
+            // JAVASCRIPT Rules
+            {
+                "name": "Js-obj-field",
+                "scope":[
+                    "meta.object-literal.key.js",
+                    "punctuation.separator.key-value.js",
+                    "support.variable.property.js",
+                    "support.class.builtin.js"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Js-standard-library",
+                "scope":[
+                    "support.constant.math.js",
+                    "support.class.js",
+                    "support.class.console.js",
+                    "support.variable.object.node.js",
+                    "constant.language",
+                    "constant.language.boolean",
+                    "constant.language.undefined",
+                    "constant.language.null.js",
+                    "constant.language.infinity.js",
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Js-keyword",
+                "scope": [
+                    "keyword.operator.new.js",
+                    "keyword.operator.expression.typeof.js",
+                    "keyword.operator.expression.in.js",
+                    "keyword.other.js"
+                ],
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Js-doccumentation",
+                "scope": [
+                    "variable.other.jsdoc",
+                    "entity.name.type.instance.jsdoc",
+                    "punctuation.definition.bracket.curly.begin.jsdoc",
+                    "punctuation.definition.bracket.curly.end.jsdoc",
+                    "punctuation.definition.block.tag.jsdoc",
+                    "storage.type.class.jsdoc",
+                ],
+                "settings": {
+                    "foreground": "#8BC0F3",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Js-regex",
+                "scope": [
+                    "string.regexp.js",
+                    "meta.group.regexp",
+                    "keyword.control.anchor.regexp",
+                    "keyword.operator.quantifier.regexp",
+                    "keyword.operator.or.regexp",
+                    "keyword.operator.negation.regexp",
+                    "punctuation.definition.group.regexp",
+                    "punctuation.definition.character-class.regexp",
+                    "constant.other.character-class.range.regexp",
+                    "constant.other.character-class.set.regexp",
+                    "constant.other.character-class.regexp",
+                    "meta.assertion.look-ahead.regexp",
+                    "punctuation.definition.group.assertion.regexp",
+                    "meta.group.assertion.regexp"
+                ],
+                "settings": {
+                    "foreground": "#FF00FF",
+                    "fontStyle": "italic"
+                }
             }
         ]
     },
