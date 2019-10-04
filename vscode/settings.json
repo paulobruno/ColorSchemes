@@ -185,8 +185,10 @@
                     "support.type",
                     "storage.modifier",
                     "variable.language",
+                    "keyword.operator.new.cpp",
                     "keyword.operator.cast",
-                    "keyword.operator.sizeof"
+                    "keyword.operator.sizeof",
+                    "keyword.other"
                 ],
                 "settings": {
                     "foreground": "#FF0000",
@@ -203,7 +205,10 @@
             },
             {
                 "name": "C-Number",
-                "scope":"constant.numeric",
+                "scope": [
+                    "constant.numeric",
+                    "keyword.other.unit.suffix"
+                ],
                 "settings": {
                     "foreground": "#FFA500",
                     "fontStyle": ""
@@ -213,11 +218,14 @@
                 "name": "C-Type",
                 "scope": [
                     "entity.name.type",
+                    "entity.name.function.call.cpp",
+                    "entity.name.type.namespace.scope-resolution.cpp",
                     "constant.language.cpp",
                     "variable.other.member.cpp",
                     "variable.parameter.probably.cpp",
                     "meta.function-call.cpp",
                     "meta.function-call.member.cpp",
+                    "meta.body.class.cpp",
                     "punctuation.definition.begin.bracket.square.cpp",
                     "punctuation.definition.end.bracket.square.cpp",
                     "punctuation.section.arguments.begin.bracket.round.cpp",
@@ -232,7 +240,7 @@
                     "punctuation.section.parameters.begin.bracket.round.cpp",
                     "punctuation.section.parameters.end.bracket.round.cpp",
                     "punctuation.separator.dot-access.cpp",
-                    "punctuation.section"
+                    "punctuation.section",
                 ],
                 "settings": {
                     "foreground": "#FFFFFF",
