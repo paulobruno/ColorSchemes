@@ -146,7 +146,8 @@
                     "meta.preprocessor support.function",
                     "meta.preprocessor variable.parameter.preprocessor",
                     "meta.preprocessor variable.other",
-                    "meta.preprocessor meta.function"
+                    "meta.preprocessor meta.function",
+                    "entity.name.function.preprocessor.cpp",
                 ],
                 "settings": {
                     "foreground": "#00FF00",
@@ -170,7 +171,8 @@
                     "meta.block string.quoted.double",
                     "string.quoted.double constant.character.escape",
                     "string.quoted.single",
-                    "constant.character.escape"
+                    "constant.character.escape",
+                    "string.quoted.double.cpp",
                 ],
                 "settings": {
                     "foreground": "#FF00FF",
@@ -241,6 +243,10 @@
                     "punctuation.section.parameters.end.bracket.round.cpp",
                     "punctuation.separator.dot-access.cpp",
                     "punctuation.section",
+                    "entity.name.scope-resolution.parameter.cpp",
+                    "entity.name.scope-resolution.cpp",
+                    "entity.name.scope-resolution.template.call.cpp",
+                    "storage.modifier.reference.cpp",
                 ],
                 "settings": {
                     "foreground": "#FFFFFF",
@@ -618,7 +624,76 @@
                     "foreground": "#FF00FF",
                     "fontStyle": "italic"
                 }
-            }
+            },
+
+            // LATEX Rules
+            {
+                "name": "Latex-function",
+                "scope":[
+                    "support.function",
+                    "punctuation.definition.arguments.begin.latex",
+                    "punctuation.definition.arguments.end.latex",
+                    "punctuation.definition.textit.begin.latex",
+                    "punctuation.definition.textit.end.latex",
+                ],
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Latex-math",
+                "scope":[
+                    "support.class.math",
+                    "constant.numeric.math.tex",
+                    "constant.character.escape.tex",
+                ],
+                "settings": {
+                    "foreground": "#6EE6AC",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Latex-bold",
+                "scope":[
+                    "markup.bold.textbf.latex"
+                ],
+                "settings": {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Latex-ref",
+                "scope":[
+                    "constant.other.reference.label.latex",
+                    "variable.parameter.function.latex",
+                    "meta.function.environment.latex.tikz",
+                    "meta.function.environment.latex.tikz meta.function.environment.general.latex"
+                ],
+                "settings": {
+                    "foreground": "#CCC",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Latex-include",
+                "scope":[
+                    "meta.preamble.latex",
+                    "meta.preamble.latex punctuation.definition.arguments.begin.latex",
+                    "meta.preamble.latex punctuation.definition.arguments.end.latex",
+                    "meta.preamble.latex variable.parameter.latex",
+                    "meta.preamble.latex keyword.control.preamble.latex",
+                    "meta.include.latex",
+                    "meta.include.latex keyword.control.include.latex",
+                    "meta.include.latex punctuation.definition.arguments.begin.latex",
+                    "meta.include.latex punctuation.definition.arguments.end.latex",
+                ],
+                "settings": {
+                    "foreground": "#6EE6AC",
+                    "fontStyle": ""
+                }
+            },
         ]
     },
     "workbench.activityBar.visible": true,
@@ -649,5 +724,8 @@
         "empty",
         "copyright",
         "custom"
-    ]
+    ],
+    "workbench.colorTheme": "Visual Studio Dark",
+    "python.dataScience.askForKernelRestart": false,
+    "latex-workshop.view.pdf.viewer": "tab"
 }
