@@ -3,7 +3,8 @@
     "editor.renderIndentGuides": true,
     "editor.detectIndentation": false,
     "editor.insertSpaces": true,
-    "editor.tabCompletion": false,
+    "editor.tabCompletion": "off",
+    "editor.wordWrap": "on",
 
     "files.useExperimentalFileWatcher": true,
 
@@ -25,7 +26,6 @@
         "panel.background": "#111111",
         "sideBar.background": "#111111",
         "dropdown.background": "#111111",
-        "editorGroup.background": "#111111",
         "titleBar.activeBackground": "#111111",
         "tab.activeBackground": "#000000",
         "tab.inactiveBackground": "#111111",
