@@ -148,6 +148,11 @@
                     "meta.preprocessor variable.other",
                     "meta.preprocessor meta.function",
                     "entity.name.function.preprocessor.cpp",
+                    "keyword.control.directive.conditional.ifdef.cpp",
+                    "keyword.control.directive.conditional.ifndef.cpp",
+                    "keyword.control.directive.else.cpp",
+                    "keyword.control.directive.elif.cpp",
+                    "keyword.control.directive.endif.cpp",
                 ],
                 "settings": {
                     "foreground": "#00FF00",
