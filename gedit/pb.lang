@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ Authors: Paulo Bruno de Sousa Serafim
+ Copyright (C) 2015 Paulo Bruno de Sousa Serafim <pbrunosousa@gmail.com>
+ 
+-->
+
+<language id="pb" _name="PB" version="2.0" _section="Markup">
+
+  <metadata>
+    <property name="mimetypes">text/plain</property>
+    <property name="globs">*.pb</property>
+  </metadata>
+
+  <styles>
+    <style id="comment"     _name="Comment"/>
+    <style id="title"       _name="Title"/>
+    <style id="subtitle"    _name="Subtitle"/>
+    <style id="bullet"      _name="Bullet"/>
+    <style id="numbering"   _name="Numbering"/>
+  </styles>
+
+  <definitions>
+
+	<context id="pb">
+	  
+	  <include>
+	  
+		<context id="line-comment" style-ref="comment" end-at-line-end="true" class="comment" class-disabled="no-spell-check">
+		  <start>//</start>
+		  <end>$</end>
+		</context>
+
+		<context id="block-comment" style-ref="comment" class="comment" class-disabled="no-spell-check">
+		  <start>\/\*</start>
+		  <end>\*\/</end>
+		</context>
+
+		<context id="title" style-ref="title" end-at-line-end="true" class="title" class-disabled="no-spell-check">
+		  <start>#\ </start>
+		  <end>$</end>
+		</context>
+
+		<context id="subtitle" style-ref="subtitle" end-at-line-end="true" class="subtitle" class-disabled="no-spell-check">
+		  <start>--\ </start>
+		  <end>$</end>
+		</context>
+
+		<context id="observation" style-ref="subtitle" end-at-line-end="true" class="observation" class-disabled="no-spell-check">
+		  <start>(obs|Obs|OBS)(.:)</start>
+		  <end>$</end>
+		</context>
+
+		<context id="bullet" style-ref="bullet">
+		  <match extended="true">
+			(^((\ )|(\t))*)(->\ )|(\*\ )
+		  </match>
+		</context>
+
+		<context id="numbering" style-ref="numbering">
+		  <match extended="true">
+			(^((\ )|(\t))*)((\(([a-zA-Z]|[0-9]+)\))|([a-zA-Z]|[0-9]+))(\)|\.)((\ )|(\t)|$)+
+		  </match>
+		</context>
+		
+      </include>
+
+	</context>
+	
+  </definitions>
+  
+</language>
