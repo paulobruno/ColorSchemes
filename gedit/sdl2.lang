@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ This file is part of GtkSourceView
+
+ Authors: Marco Barisione, Emanuele Aina; SDL adaptation by Paulo Bruno de Sousa Serafim
+ Copyright (C) 2005-2007 Marco Barisione <barisione@gmail.com>
+ Copyright (C) 2005-2007 Emanuele Aina
+ Copyright (C) 2014 Paulo Bruno de Sousa Serafim
+
+ GtkSourceView is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ GtkSourceView is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-->
+<language id="sdl2" _name="SDL2.0" version="2.0" _section="Sources">
+    <metadata>
+      <property name="mimetypes">text/x-c++;text/x-cpp;text/x-c++src</property>
+      <property name="globs">*.cpp;*.cxx;*.cc;*.C;*.c++</property>
+      <property name="line-comment-start">//</property>
+      <property name="block-comment-start">/*</property>
+      <property name="block-comment-end">*/</property>
+    </metadata>
+
+    <styles>
+        <style id="keyword" _name="Keyword" map-to="cpp:keyword"/>
+        <style id="type" _name="Data Type" map-to="cpp:type"/>
+    </styles>
+
+    <definitions>
+        <!-- SDL-specific stuff (i.e. stuff which is not C++) -->
+        <context id="sdl-proper">
+            <include>
+                <context id="keywords" style-ref="keyword">
+                    <keyword>SDL_assert_data</keyword>
+					<keyword>SDL_atomic_t</keyword>
+					<keyword>SDL_AudioCVT</keyword>
+					<keyword>SDL_AudioDevice</keyword>
+					<keyword>SDL_AudioDriver</keyword>
+					<keyword>SDL_AudioDriverImpl</keyword>
+					<keyword>SDL_AudioRateFilters</keyword>
+					<keyword>SDL_AudioSpec</keyword>
+					<keyword>SDL_AudioStreamer</keyword>
+					<keyword>SDL_AudioTypeFilters</keyword>
+					<keyword>SDL_BApp</keyword>
+					<keyword>SDL_BlitFuncEntry</keyword>
+					<keyword>SDL_BlitInfo</keyword>
+					<keyword>SDL_BlitMap</keyword>
+					<keyword>SDL_BWin</keyword>
+					<keyword>SDL_Color</keyword>
+					<keyword>SDL_CommonEvent</keyword>
+					<keyword>SDL_cond</keyword>
+					<keyword>SDL_ControllerAxisEvent</keyword>
+					<keyword>SDL_ControllerButtonEvent</keyword>
+					<keyword>SDL_ControllerDeviceEvent</keyword>
+					<keyword>SDL_Cursor</keyword>
+					<keyword>SDL_DisabledEventBlock</keyword>
+					<keyword>SDL_DisplayData</keyword>
+					<keyword>SDL_DisplayMode</keyword>
+					<keyword>SDL_DisplayModeData</keyword>
+					<keyword>SDL_DollarGestureEvent</keyword>
+					<keyword>SDL_DollarPath</keyword>
+					<keyword>SDL_DollarTemplate</keyword>
+					<keyword>SDL_DropEvent</keyword>
+					<keyword>SDL_DYNAPI_jump_table</keyword>
+					<keyword>SDL_error</keyword>
+					<keyword>SDL_Event</keyword>
+					<keyword>SDL_EventWatcher</keyword>
+					<keyword>SDL_Finger</keyword>
+					<keyword>SDL_FloatPoint</keyword>
+					<keyword>SDL_FormatInfo</keyword>
+					<keyword>SDL_FPoint</keyword>
+					<keyword>SDL_FRect</keyword>
+					<keyword>SDL_GameControllerButtonBind</keyword>
+					<keyword>SDL_GestureTouch</keyword>
+					<keyword>SDL_GLDriverData</keyword>
+					<keyword>SDL_HapticCondition</keyword>
+					<keyword>SDL_HapticConstant</keyword>
+					<keyword>SDL_HapticCustom</keyword>
+					<keyword>SDL_HapticDirection</keyword>
+					<keyword>SDL_HapticEffect</keyword>
+					<keyword>SDL_HapticLeftRight</keyword>
+					<keyword>SDL_HapticPeriodic</keyword>
+					<keyword>SDL_HapticRamp</keyword>
+					<keyword>SDL_Hint</keyword>
+					<keyword>SDL_HintWatch</keyword>
+					<keyword>SDL_JoyAxisEvent</keyword>
+					<keyword>SDL_JoyBallEvent</keyword>
+					<keyword>SDL_JoyButtonEvent</keyword>
+					<keyword>SDL_JoyDeviceEvent</keyword>
+					<keyword>SDL_JoyHatEvent</keyword>
+					<keyword>SDL_JoystickGUID</keyword>
+					<keyword>SDL_Keyboard</keyword>
+					<keyword>SDL_KeyboardEvent</keyword>
+					<keyword>SDL_Keysym</keyword>
+					<keyword>SDL_LogLevel</keyword>
+					<keyword>SDL_MessageBoxButtonData</keyword>
+					<keyword>SDL_MessageBoxColor</keyword>
+					<keyword>SDL_MessageBoxColorScheme</keyword>
+					<keyword>SDL_MessageBoxData</keyword>
+					<keyword>SDL_Mouse</keyword>
+					<keyword>SDL_MouseButtonEvent</keyword>
+					<keyword>SDL_MouseClickState</keyword>
+					<keyword>SDL_MouseData</keyword>
+					<keyword>SDL_MouseMotionEvent</keyword>
+					<keyword>SDL_MouseWheelEvent</keyword>
+					<keyword>SDL_MultiGestureEvent</keyword>
+					<keyword>SDL_mutex</keyword>
+					<keyword>SDL_OSEvent</keyword>
+					<keyword>SDL_Palette</keyword>
+					<keyword>SDL_PixelFormat</keyword>
+					<keyword>SDL_Point</keyword>
+					<keyword>SDL_PrivateAudioData</keyword>
+					<keyword>SDL_PrivateGLESData</keyword>
+					<keyword>SDL_QuadTreeChildren</keyword>
+					<keyword>SDL_QuitEvent</keyword>
+					<keyword>SDL_Rect</keyword>
+					<keyword>SDL_RenderDriver</keyword>
+					<keyword>SDL_Renderer</keyword>
+					<keyword>SDL_RendererInfo</keyword>
+					<keyword>SDL_RWops</keyword>
+					<keyword>SDL_semaphore</keyword>
+					<keyword>SDL_ShapeData</keyword>
+					<keyword>SDL_ShapeDriver</keyword>
+					<keyword>SDL_ShapeTree</keyword>
+					<keyword>SDL_ShapeUnion</keyword>
+					<keyword>SDL_Surface</keyword>
+					<keyword>SDL_SW_YUVTexture</keyword>
+					<keyword>SDL_SysWMEvent</keyword>
+					<keyword>SDL_SysWMinfo</keyword>
+					<keyword>SDL_SysWMmsg</keyword>
+					<keyword>SDL_TextEditingEvent</keyword>
+					<keyword>SDL_TextInputEvent</keyword>
+					<keyword>SDL_Texture</keyword>
+					<keyword>SDL_Thread</keyword>
+					<keyword>SDL_TimerData</keyword>
+					<keyword>SDL_TLSData</keyword>
+					<keyword>SDL_TLSEntry</keyword>
+					<keyword>SDL_Touch</keyword>
+					<keyword>SDL_TouchFingerEvent</keyword>
+					<keyword>SDL_uikitopenglview</keyword>
+					<keyword>SDL_uikitview</keyword>
+					<keyword>SDL_uikitviewcontroller</keyword>
+					<keyword>SDL_UserEvent</keyword>
+					<keyword>SDL_version</keyword>
+					<keyword>SDL_VideoData</keyword>
+					<keyword>SDL_VideoDevice</keyword>
+					<keyword>SDL_VideoDisplay</keyword>
+					<keyword>SDL_Window</keyword>
+					<keyword>SDL_WindowData</keyword>
+					<keyword>SDL_WindowEvent</keyword>
+					<keyword>SDL_WindowShapeMode</keyword>
+					<keyword>SDL_WindowShapeParams</keyword>
+					<keyword>SDL_WindowShaper</keyword>
+					<keyword>SDL_WindowTextureData</keyword>
+					<keyword>SDL_WindowUserData</keyword>
+                </context>
+            </include>
+        </context>
+
+        <!-- actual language definition: SDL-specific stuff plus everything from C++ -->
+        <context id="sdl2">
+            <include>
+                <context ref="sdl-proper"/>
+                <context ref="cpp:cpp"/>
+            </include>
+        </context>
+    </definitions>
+</language>
